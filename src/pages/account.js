@@ -29,13 +29,6 @@ query MyQuery {
           }
         }
       },
-    allMultiApiSourceFin {
-        edges {
-            node {
-              
-            }
-          }
-    }
   }
   
 `

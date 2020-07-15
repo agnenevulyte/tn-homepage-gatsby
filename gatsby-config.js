@@ -12,8 +12,7 @@ module.exports = {
       options: {
         apis: [
           "https://api.spacex.land/rest/rockets",
-          "https://jsonplaceholder.typicode.com/users",
-          "https://ra9qbnj3ah.execute-api.eu-west-2.amazonaws.com/fin/marketing/docs/home-page"
+          "https://jsonplaceholder.typicode.com/users"
         ],
       },
     },
