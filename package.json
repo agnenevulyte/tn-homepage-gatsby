@@ -17,6 +17,7 @@
     "bootstrap": "^4.5.0",
     "gatsby": "^2.23.12",
     "gatsby-plugin-sharp": "^2.6.19",
+    "gatsby-source-multi-api": "^1.0.5",
     "gatsby-transformer-sharp": "^2.5.11",
     "react": "^16.12.0",
     "react-bootstrap": "^1.2.2",

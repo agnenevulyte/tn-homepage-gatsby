@@ -8,10 +8,13 @@ const path = require(`path`);
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-multi-api',
       options: {
-        name: `images`,
-        path: `${__dirname}/static/images`,
+        apis: [
+          "https://api.spacex.land/rest/rockets",
+          "https://jsonplaceholder.typicode.com/users",
+          "https://ra9qbnj3ah.execute-api.eu-west-2.amazonaws.com/fin/marketing/docs/home-page"
+        ],
       },
     },
     `gatsby-plugin-sharp`,
@@ -19,6 +22,7 @@ module.exports = {
   ],
   siteMetadata: {
     title: 'TN home page',
+    description: "This is where I write my thoughts.",
     menuLinks:[
       {
          name:'What we do',
@@ -41,6 +45,5 @@ module.exports = {
         link:'/'
       },
     ]
-  },
-  plugins: []
+  }
 }
