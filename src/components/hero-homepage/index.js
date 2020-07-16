@@ -3,6 +3,7 @@ import React from 'react';
 import { DynamicIcon } from '../index';
 import Link from 'gatsby';
 import styled from "styled-components";
+import "./hero-homepage.css"
 
 
 function HeroHomepage({ data }) {
@@ -27,48 +28,23 @@ function HeroHomepage({ data }) {
           <div className="hero-homepage__bkgd" />
           {data.items.map(
             (item, index) =>
-              item.primary_heading.length > 0 && (
-                <div
-                  className="hero-homepage__container"
-                  key={item.primary_cta_url + index.toString()}
-                >
-                  <div className="hero-homepage__title hero-homepage__title--black">
-                    {RichText.render(item.primary_heading)}
-                  </div>
-  
-                  <div className="hero-homepage__title hero-homepage__title--white">
-                    {RichText.render(item.secondary_heading)}
-                  </div>
-  
-                  <div className="hero-homepage__links">
-                    {item.primary_cta_url && (
-                      <Link
-                        className="hero-homepage__link hero-homepage__link--white"
-                        href={item.primary_cta_url}
-                      >
-                        {item.primary_cta_display_value}
-                        <span className="hero-homepage__link-arrow hero-homepage__link-arrow--white">
-                          <DynamicIcon icon="circle-arrow-right-white" />
-                        </span>
-                      </Link>
-                    )}
-                    {item.secondary_cta_url && (
-                      <Link
-                        className="hero-homepage__link hero-homepage__link--black"
-                        href={item.secondary_cta_url}
-                      >
-                        {item.secondary_cta_display_value}
-                        <span className="hero-homepage__link-arrow hero-homepage__link-arrow--orange">
-                          <DynamicIcon icon="circle-arrow-right" />
-                        </span>
-                      </Link>
-                    )}
-                  </div> 
-                  {item.background_image.mobile.copyright}
-                  {item.background_image.url &&
-                    this.getImageTemplate(item.background_image)}
+            item.primary_heading.length > 0 && (
+              <div
+                className="hero-homepage__container"
+                key={item.primary_cta_url + index.toString()}
+              >
+                <div className="hero-homepage__title hero-homepage__title--black">
+                <div><p>        {RichText.render(item.primary_heading)}
+                </p></div>  
+        
                 </div>
-              )
+                <div className="hero-homepage__title hero-homepage__title--white">
+                <div><p>        {RichText.asText(item.secondary_heading)}
+                </p></div>  
+                
+              </div>
+              </div>
+            )
           )}
         </section>
       );
