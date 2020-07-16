@@ -7,14 +7,9 @@ export default function Tetst({ data }) {
     <div className="page page-homepage" style={{ color: `teal` }}>
       <Link to='/'>Home</Link>
       <p>API TEST</p>
-      <h1>{data.allMultiApiSourceRestRockets.edges[0].node.country}</h1>
-      <h1>{data.allMultiApiSourceUsers.edges[0].node.name}</h1>
-      <h1>{data.tn.uid}</h1>
-      <h1>{data.tn.type}</h1>
-      <h1>{data.tn.data.title}</h1>
-
-
-
+      <h1>{data.tn.data.components[0].component.type}</h1>
+      <h1>{data.tn.data.components[0].component.data.items[0].primary_heading[0].text}</h1>
+      <h1>{data.tn.data.components[0].component.data.items[0].secondary_heading[0].text}</h1>
     </div>
     
   )
@@ -22,87 +17,35 @@ export default function Tetst({ data }) {
 
 export const myQuery = graphql`
 query MyQuery {
-    allMultiApiSourceRestRockets {
-      edges {
-        node {
-          country
-        }
-      }
-    },
-    allMultiApiSourceUsers {
-      edges {
-        node {
-          name
-        }
-      }
-    },
-    tn {
-        type
-        uid
-        data {
-          footer {
-            data {
-              copyright
-              contact {
-                tel_number
-              }
-              faqs {
-                display_value
-                url
-              }
-              footer_logo {
-                alt
+  tn {
+    data {
+      components {
+        component {
+          id
+          type
+          data {
+            items {
+              background_image {
                 dimensions {
                   height
                   width
                 }
                 url
               }
-              footer_social {
-                icon_name
-                url
+              primary_heading {
+                text
               }
-              legal {
-                body {
-                  spans {
-                    data {
-                      id
-                      isBroken
-                      lang
-                      link_type
-                      slug
-                      tags
-                      type
-                      uid
-                    }
-                    end
-                    start
-                    type
-                  }
-                  text
-                  type
-                }
+              secondary_heading {
+                text
               }
-              meta_links {
-                display_value
-                url
-              }
-              name
+              primary_cta_display_value
+              primary_cta_url
             }
-            id
-            isBroken
-            lang
-            link_type
-            slug
-            type
           }
-          meta_description
-          name
-          slug
-          title
-          visibility
         }
-    },
+      }
+    }
+  },
   }
   
 `
