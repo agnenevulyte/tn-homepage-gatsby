@@ -1,16 +1,56 @@
-import React from "react";
-import { Link } from "gatsby";
+import React, { useEffect, useState } from "react";
+// import { Link, graphql } from "gatsby";
+import { PrismicTypes } from '../components';
 import Layout from '../components/layout'
-// import Tetst from '../components/button'
+// import HeroHomepage from '../components/hero-homepage'
 
-export default function Home() {
+export default function HomePage() {
+
+  const [contentLoaded, setContentLoaded] = useState(false);
+  // Client-side Runtime Data Fetching
+  const [myData, setmyData] = useState({})
+
+  useEffect(() => {
+    // get data from API
+    fetch(`https://ra9qbnj3ah.execute-api.eu-west-2.amazonaws.com/fin/marketing/docs/home-page`)
+      .then(response => response.json()) // parse JSON from request
+      .then(resultData => {
+        setmyData(resultData.data)
+        console.log('resultData.data---', resultData.data)
+        console.log('fuck meeee---', resultData.data.components[0].component)
+      })
+  }, [])
+  // console.log('myData---', myData)
+  useEffect(() => {
+    myData && myData.components && myData.components.length > 0 && setContentLoaded(true);
+  }, [myData]);
+
+
   return (
-    <div style={{ color: `purple` }}>
+    <div className="page page-homepage" style={{ color: `teal` }}>
       <Layout />
-      <Link to="/contact/">Contact</Link>
-      <Link to="/account/">Account</Link>
-      <p>What a world.</p>
-      <img src="https://source.unsplash.com/random/400x200" alt="" />
+
+      <p>API TEST</p>
+
+
+      {myData && myData.components && contentLoaded && (
+        <div>
+          {myData.components && myData.components.map(({ component }, index) => {
+            const PrismicComponent = PrismicTypes[component.type];
+            return (
+              PrismicComponent && (
+                <PrismicComponent
+                  type={component.type}
+                  data={component.data}
+                  key={component.type + index.toString()}
+                />
+              )
+            );
+          })}
+        </div>
+      )}
+
     </div>
+
   )
 }

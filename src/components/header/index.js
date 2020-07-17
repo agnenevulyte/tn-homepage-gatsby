@@ -53,7 +53,7 @@ function Header({ siteTitle, menuLinks, ...props }) {
                         <div className="header__branding d-flex flex-row">
 
                             <div className="header__logo_container_desktop">
-                                <Link href={'/'}>
+                                <Link to={'/'}>
                                     <img src="./header_logo.svg" alt="header logo tn" />
                                 </Link>
 
