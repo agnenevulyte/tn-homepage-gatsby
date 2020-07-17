@@ -5,13 +5,13 @@ exports.sourceNodes = async ({
   createContentDigest,
 }) => {
   // get data from GitHub API at build time
+  
   const result = await fetch(`https://ra9qbnj3ah.execute-api.eu-west-2.amazonaws.com/fin/marketing/docs/home-page`)
   const resultData = await result.json()
   console.log('resultData', resultData)
   // create node for build time data example in the docs
   createNode({
-    // nameWithOwner and url are arbitrary fields from the data
-    uid: resultData.uid,
+    // uid: resultData.uid,
     type: resultData.type,
     data: resultData.data,
     // required fields
@@ -24,3 +24,4 @@ exports.sourceNodes = async ({
     },
   })
 }
+

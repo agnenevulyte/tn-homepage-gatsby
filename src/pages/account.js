@@ -1,33 +1,52 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import { useEffect, useState } from 'react';
 import { PrismicTypes } from '../components';
+import HeroHomepage from '../components/hero-homepage'
 
-export default function Tetst({ data }) {
+export default function Tetst() {
 
   const [ contentLoaded, setContentLoaded ] = useState(false);
+  // Client-side Runtime Data Fetching
+  const [myData, setmyData] = useState({})
 
   useEffect(() => {
-    data && data.tn && data.tn.data && data.tn.data.components && data.tn.data.components.length > 0 && setContentLoaded(true);
-  }, []);
+    // get data from API
+    fetch(`https://ra9qbnj3ah.execute-api.eu-west-2.amazonaws.com/fin/marketing/docs/home-page`)
+      .then(response => response.json()) // parse JSON from request
+      .then(resultData => {
+        setmyData(resultData.data)
+        console.log('resultData.data---', resultData.data)
+        console.log('fuck meeee---', resultData.data.components[0].component)
+      })
+  }, [])
+console.log('myData---', myData)
+// console.log('myData.components[0].component.data---', myData.components[0].component.data)
+  useEffect(() => {
+    myData && myData.components && myData.components.length > 0 && setContentLoaded(true);
+  }, [myData]);
+
+  // const componentData = myData.components[0].component.data;
   // console.log('AT | contentLoaded:', contentLoaded);
-  console.log('data-----', data)
-  console.log('data.type---', data.tn.type)
-  console.log('data.type---', data.tn.data)
+  // console.log('data-----', gatsbyRepoData)
+  // console.log('data.type---', data.tn.type)
+  // console.log('data.type---', data.tn.data)
   return (
     <div className="page page-homepage" style={{ color: `teal` }}>
       <Link to='/'>Home</Link>
       <p>API TEST</p>
-      <h1>{data.tn.data.components[0].component.type}</h1>
-      <h1>{data.tn.data.components[0].component.data.items[0].primary_heading[0].text}</h1>
-      <h1>{data.tn.data.components[0].component.data.items[0].secondary_heading[0].text}</h1>
 
-      {data && data.tn && data.tn.data && data.tn.data.components && contentLoaded && (
+
+
+
+      {myData && myData.components && contentLoaded && (
+        // <HeroHomepage data={componentData} />
         <div>
-          {data.tn.data.components && data.tn.data.components.map(({ component }, index) => {
-            console.log('component----', component)
+          {myData.components && myData.components.map(({ component }, index) => {
+            // console.log('component----', component)
             const PrismicComponent = PrismicTypes[component.type];
-            console.log('PrismicComponent----', PrismicComponent)
+            // console.log('component.type---', component.type)
+            // console.log('PrismicComponent----', PrismicComponent)
             return (
               PrismicComponent && (
                 <PrismicComponent
@@ -46,38 +65,38 @@ export default function Tetst({ data }) {
   )
 }
 
-export const myQuery = graphql`
-query MyQuery {
-  tn {
-    type
-    data {
-      components {
-        component {
-          id
-          type
-          data {
-            items {
-              background_image {
-                dimensions {
-                  height
-                  width
-                }
-                url
-              }
-              primary_heading {
-                text
-              }
-              secondary_heading {
-                text
-              }
-              primary_cta_display_value
-              primary_cta_url
-            }
-          }
-        }
-      }
-    }
-  },
-  }
+// export const myQuery = graphql`
+// query MyQuery {
+//   tn {
+//     type
+//     data {
+//       components {
+//         component {
+//           id
+//           type
+//           data {
+//             items {
+//               background_image {
+//                 dimensions {
+//                   height
+//                   width
+//                 }
+//                 url
+//               }
+//               primary_heading {
+//                 text
+//               }
+//               secondary_heading {
+//                 text
+//               }
+//               primary_cta_display_value
+//               primary_cta_url
+//             }
+//           }
+//         }
+//       }
+//     }
+//   },
+//   }
   
-`
+// `
