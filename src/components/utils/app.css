@@ -19,3 +19,31 @@ a {
     padding: 0;
     text-decoration: none;
 }
+
+#___gatsby {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  
+    /* Force footer to bottom of page */
+    .footer {
+      margin-top: auto;
+    }
+  }
+
+  .page__title {
+    background-color: var(--color-bright-orange);
+  }
+  .page__heading {
+    font: normal normal 3.6rem/normal var(--font-montserrat);
+    padding-bottom: 26px;
+  }
+  @media (min-width: 1280px) {
+    .page__heading {
+      font-size: 4rem;
+    }
+  }
+  .page__txt {
+    font: normal 300 1.8rem/2.6rem var(--font-montserrat);
+  }
