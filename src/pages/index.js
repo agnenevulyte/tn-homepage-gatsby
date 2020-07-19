@@ -53,8 +53,6 @@ export default function HomePage() {
       )}
 
 
-      <Link to="/introductionPage">Introduction Page</Link>
-      <p>API TEST</p>
     </main>
     </React.Fragment>
 
