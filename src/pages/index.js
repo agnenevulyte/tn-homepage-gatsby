@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-// import { Link, graphql } from "gatsby";
+import { Link } from "gatsby";
 import { PrismicTypes } from '../components';
-import Layout from '../components/layout'
+import Layout from '../components/layout';
+import Header from '../components/header'
+import '../components/utils/app.css';
+import '../common.css';
 // import HeroHomepage from '../components/hero-homepage'
 
 export default function HomePage() {
@@ -27,12 +30,11 @@ export default function HomePage() {
 
 
   return (
-    <div className="page page-homepage" style={{ color: `teal` }}>
-      <Layout />
+    <React.Fragment>
+    
+      <Header />
 
-      <p>API TEST</p>
-
-
+      <main className="page page-homepage">
       {myData && myData.components && contentLoaded && (
         <div>
           {myData.components && myData.components.map(({ component }, index) => {
@@ -50,7 +52,11 @@ export default function HomePage() {
         </div>
       )}
 
-    </div>
+
+      <Link to="/introductionPage">Introduction Page</Link>
+      <p>API TEST</p>
+    </main>
+    </React.Fragment>
 
   )
 }
