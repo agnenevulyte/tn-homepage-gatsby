@@ -1,0 +1,19 @@
+:root {
+    --z-index-header: 20;
+    --z-index-welcome-message: 18;
+    --z-index-sticky-tabs: 15;
+    --z-index-review-carousel-arrow: 10;
+    --z-index-img-secondary: 10;
+    --z-index-img-primary: 5;
+    --z-index-hero-bkgd: -1;
+    --z-index-feature-list: -1;
+    --z-index-premium-content-modal: 21;
+    --z-index-risk-warning: 19;
+    --z-index-contact-form: 5;
+    --z-index-signup-progress: 4;
+    --z-index-nav: 5;
+    --z-index-blog-filters: 21;
+    --z-index-date-picker: 30;
+    --z-index-add-account-modal: 40;
+  }
+  

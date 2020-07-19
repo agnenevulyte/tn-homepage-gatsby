@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    src: url("./assets/fonts/light/montserrat-light.otf") format("opentype"), url("./assets/fonts/light/montserrat-light.eot") format("embedded-opentype");
+  }
+  @font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    src: url("./assets/fonts/regular/montserrat-regular.otf") format("opentype"), url("./assets/fonts/regular/montserrat-regular.eot") format("embedded-opentype");
+  }
+  @font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    src: url("./assets/fonts/medium/montserrat-medium.otf") format("opentype"), url("./assets/fonts/medium/montserrat-medium.eot") format("embedded-opentype");
+  }
+  @font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    src: url("./assets/fonts/semibold/montserrat-semibold.otf") format("opentype"), url("./assets/fonts/semibold/montserrat-semibold.eot") format("embedded-opentype");
+  }
+  :root {
+    --font-montserrat: "Montserrat", "Helvetica", sans-serif;
+  }
+  
+  /* Better font rendering */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  a,
+  span,
+  input,
+  label,
+  textarea,
+  time,
+  button,
+  address {
+    font-smoothing: antialiased;
+  }
+  
+  /* Font sizing */
+  html {
+    color: var(--color-black);
+    font: 62.5% var(--font-montserrat);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+  }
+  
+  /* Generic font styling */
+  h1,
+  .h--h1 {
+    font-size: 5.2rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  h2,
+  .h--h2 {
+    font-size: 4rem;
+    font-weight: normal;
+    line-height: normal;
+  }
+  
+  h3,
+  .h--h3 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 4.7rem;
+  }
+  
+  h4,
+  .h--h4 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  h5,
+  .h--h5 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  h6,
+  .h--h6 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .h--page-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 15%;
+    line-height: 2rem;
+  }
+  
+  .p--large {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 2.7rem;
+  }
+  
+  p,
+  .p--medium {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    /* empty paragraph space */
+    min-height: 2.4rem;
+  }
+  
+  .p--small {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+  }
+  
+  a,
+  .a--medium {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+  
+  .a--small {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+  }

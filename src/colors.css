@@ -1,0 +1,35 @@
+:root {
+  --color-dark-orange: #fc5000;
+  --color-bright-orange: #ff5d2e;
+  --color-orange: #ee6841;
+  --color-light-orange: #ff9e82;
+  --color-salmon: #fedccc;
+  --color-cyan: #2de0e8;
+  --color-pale-green: #23c68b;
+  --color-bright-red: #ff5d2e;
+  --color-light: #f5f5f5;
+  --color-extra-light-gray: #f7f7f7;
+  --color-light-gray: #ededed;
+  --color-dark-gray: #a0a0a0;
+  --color-gray: #c4c4c4;
+  --color-dark-title: #333;
+  --color-light-nav: #979797;
+  --color-light-border: #e5e5e5;
+  --color-dark: #3c3c3b;
+  --color-black-gray: #333;
+  --color-alto: #595959;
+  --color-white: #fff;
+  --color-white-transparent: rgba(255, 255, 255, 0.6);
+  --color-black: #000;
+  --color-black-transparent: rgba(0, 0, 0, 0.6);
+  --color-transparent: rgba(255, 255, 255, 0);
+  --color-transparent-grey: rgba(196, 196, 196, 0.2);
+  --color-green-pulse: #2de8a5;
+  --color-green-pulse-light: #cbf6e5;
+  --color-google: #fc5000;
+  --color-facebook: #4b69ad;
+  --color-linkedin: #2f77b0;
+  --color-apple: #000;
+  --color-light-cyan: #caf7f9;
+  --color-lighter-grey: #dadcdf;
+}
