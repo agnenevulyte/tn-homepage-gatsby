@@ -1,0 +1,38 @@
+.btn {
+    margin: 0 10px;
+    padding: 12px 25px;
+    transition: all .2s linear;
+}
+
+.btn--text {
+    background: hsla(0,0%,100%,0);
+    border-color: hsla(0,0%,100%,0);
+    color: #fff;
+    border-radius: 50px;
+}
+
+.btn--secondary {
+    background: hsla(0,0%,100%,0);
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    font: 500 1.4rem Montserrat, Helvetica, sans-serif;
+    padding: 11px 25px;
+    text-align: center;
+}
+
+.btn--secondary:hover {
+    background-color: white;
+    color: #ff5d2e;
+}
+
+.btn--text:hover {
+    background-color: white;
+    color: #ff5d2e;
+}
+
+.header--orange .header__cta .btn--secondary {
+    background: hsla(0,0%,100%,0);
+    color: #fff;
+}
+
