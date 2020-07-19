@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from "gatsby";
+import React, { useState } from 'react';
+import LinkButton from '../button';
+import BurgerNavSvg from '../images/svgs/burger-nav';
+import CloseSvg from '../images/svgs/close';
+// import '../../breakpoints.css'
+import '../../fonts.css';
 import './header.css';
-// import BurgerNavSvg from '../images/svgs/burger-nav';
-// import CloseSvg from '../images/svgs/close';
-import PropTypes from "prop-types";
+import '../../colors.css';
 
-function Header({ siteTitle, menuLinks, ...props }) {
+function Header({ ...props }) {
 
     const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
@@ -15,97 +17,67 @@ function Header({ siteTitle, menuLinks, ...props }) {
 
     return (
         <React.Fragment>
-            <div className='row'>
-                <header className="header header--orange">
-                    <div className={`header__open_mob_nav ${mobileNavOpen ? "mobNavOpen" : "mobNavClosed"}`}>
+            <header className="header header--orange w-100">
 
+                <div className="header__container container container--large d-flex flex-row no-gutters w-100">
 
-                        <div className={`header__mob_popout_container`}>
+                    <button
+                        aria-label="Open menu"
+                        className="header__burger-nav"
+                        type="button"
+                        onClick={toggleMobileNavBurger}
+                    >
+                        {!mobileNavOpen && <BurgerNavSvg />}
+                        {mobileNavOpen && <CloseSvg />}
+                    </button>
 
-
-                            <div >
-                                <nav className={` ${mobileNavOpen ? "slideIn" : "slideOut"} `}>
-                                    <ul style={{ display: "flex", flex: 1 }}>
-                                        {menuLinks.map(link => (
-                                            <li
-                                                key={link.name}
-                                                style={{
-                                                    listStyleType: `none`,
-                                                    padding: `1rem`,
-                                                }}
-                                            >
-                                                <Link style={{ color: `white` }} to={link.link}>
-                                                    {link.name}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </nav>
-                            </div>
-
-                        </div>
+                    <div className="header__branding d-flex flex-row">
+                        <a className="nav__link a--small" href='/'>
+                            <img className="header__logo--desktop" src="./header_logo.svg" alt="header logo tn" />
+                            <img className="header__logo--mobile" src="./header_logo_small.svg" alt="header logo mobile tn" />
+                        </a>
                     </div>
 
 
-                    <div className="header__container container container--large d-flex flex-row no-gutters w-100">
+                    <nav className="header__nav nav">
 
 
-                        <div className="header__branding d-flex flex-row">
-
-                            <div className="header__logo_container_desktop">
-                                <Link to={'/'}>
-                                    <img src="./header_logo.svg" alt="header logo tn" />
-                                </Link>
+                        <a className="nav__link a--small" href='/'>
+                            What we do
+                            </a>
 
 
-                            </div>
+                        <a className="nav__link a--small" href='/'>
+                            Why choose us
+                            </a>
 
-                            <div className="header__burger_container">
-                                buttons!!!
-                        </div>
+                        <a className="nav__link a--small" href='/'>
+                            Who we are
+                            </a>
 
-                            <div className="header__mobile_nav_container">
-                                <img src="./header_logo_small.svg" alt="header logo small" />
-                            </div>
-                            <div className="header__desktop_nav_container">
+                        <a className="nav__link a--small" href='/'>
+                            FAQ
+                            </a>
 
-                                <nav>
-                                    <ul style={{ display: "flex", flex: 1 }}>
-                                        {menuLinks.map(link => (
-                                            <li
-                                                key={link.name}
-                                                style={{
-                                                    listStyleType: `none`,
-                                                    padding: `1rem`,
-                                                }}
-                                            >
-                                                <Link style={{ color: `white` }} to={link.link}>
-                                                    {link.name}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </nav>
+                        <a className="nav__link a--small" href='/'>
+                            Discover More
+                            </a>
 
-                            </div>
 
-                        </div>
 
+                    </nav>
+
+
+                    <div className="header__cta">
+                        <LinkButton text="Login" destination="/" />
+                        <LinkButton text="Join us" destination="/" secondary />
                     </div>
 
-                </header>
-            </div>
+
+                </div>
+
+            </header>
         </React.Fragment>
-    )
+    );
 }
-
-
-Header.propTypes = {
-    siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-    siteTitle: ``,
-}
-
-export default Header;
+export default Header
