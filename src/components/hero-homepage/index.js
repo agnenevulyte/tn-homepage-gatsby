@@ -46,7 +46,7 @@ function HeroHomepage({ data }) {
               <div className="hero-homepage__links">
               {item.primary_cta_url && (
     
-                      <a className="hero-homepage__link hero-homepage__link--white" href="`https://tradenation${item.primary_cta_url}`">
+                      <a className="hero-homepage__link hero-homepage__link--white" href={`https://tradenation.com${item.primary_cta_url}`}>
                           {item.primary_cta_display_value}
                           <span className="hero-homepage__link-arrow hero-homepage__link-arrow--white">
                             <DynamicIcon icon="circle-arrow-right-white" />
@@ -56,7 +56,7 @@ function HeroHomepage({ data }) {
               )}
 
               {item.secondary_cta_url && (
-                    <a className="hero-homepage__link hero-homepage__link--black" href="`https://tradenation${item.secondary_cta_url}`">
+                    <a className="hero-homepage__link hero-homepage__link--black" href={`https://tradenation.com${item.secondary_cta_url}`} >
                         {item.secondary_cta_display_value}
                         <span className="hero-homepage__link-arrow hero-homepage__link-arrow--orange">
                             <DynamicIcon icon="circle-arrow-right" />
