@@ -4,6 +4,7 @@ import HeroHomepage from './hero-homepage';
 import Introduction from './introduction';
 import HeadingCta from './heading-cta';
 import ListBlock from './list-block';
+import RelatedArticles from './related-articles';
 
 const PrismicTypes = {
     hero: HeroHomepage,
@@ -17,7 +18,7 @@ const PrismicTypes = {
     // reviewcarousel: ReviewCarousel,
     // wysiwygcomponent: Wysiwyg,
     // featurelist: FeatureList,
-    // relatedarticles: RelatedArticles,
+    relatedarticles: RelatedArticles,
     // campaignlinks: CampaignLinks,
     // video: Video,
   

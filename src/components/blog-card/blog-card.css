@@ -1,0 +1,105 @@
+.blog-card {
+    box-shadow: 0 8px 120px rgba(0, 0, 0, 0.08);
+    display: block;
+    min-height: 390px;
+    position: relative;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+  .blog-card:hover .blog-card__img-title, .blog-card:hover .blog-card__arrow-hover {
+    background: var(--color-dark-orange);
+  }
+  @media (min-width: 1920px) {
+    .blog-card {
+      min-height: 587px;
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .blog-card__date {
+    color: var(--color-gray);
+    font: normal 500 1.6rem/normal var(--font-montserrat);
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
+  @media (min-width: 1920px) {
+    .blog-card__date {
+      font-size: 2.4rem;
+      margin-top: 30px;
+    }
+  }
+  .blog-card__title {
+    font: normal 500 2.2rem/normal var(--font-montserrat);
+    padding: 15px 0;
+  }
+  @media (min-width: 1920px) {
+    .blog-card__title {
+      font-size: 3.2rem;
+    }
+  }
+  .blog-card__text {
+    color: var(--color-black);
+    margin: 0 30px;
+  }
+  @media (min-width: 1920px) {
+    .blog-card__text {
+      margin: 0 45px;
+    }
+  }
+  .blog-card__img {
+    align-items: flex-end;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 215px;
+  }
+  @media (min-width: 1920px) {
+    .blog-card__img {
+      height: 322px;
+    }
+  }
+  .blog-card__img-title {
+    background: var(--color-black-gray);
+    color: var(--color-white);
+    display: inline-block;
+    font: normal 500 1.8rem/2.6rem var(--font-montserrat);
+    max-width: 80%;
+    padding: 14px 18px;
+    transition: background-color 0.3s;
+  }
+  @media (min-width: 980px) and (max-width: 1279px) {
+    .blog-card__img-title {
+      font: normal 500 1.4rem/2rem var(--font-montserrat);
+      padding: 10px 16px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .blog-card__img-title {
+      font: normal 500 2.7rem/3.9rem var(--font-montserrat);
+      padding: 18px 25px;
+    }
+  }
+  .blog-card__arrow-hover {
+    align-items: center;
+    background: var(--color-transparent);
+    bottom: 0;
+    display: flex;
+    height: 45px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    transform: rotateY(180deg);
+    transition: background-color 0.3s;
+    width: 45px;
+  }
+  .blog-card__arrow-hover svg {
+    height: 50%;
+    width: 50%;
+  }
+  @media (min-width: 1920px) {
+    .blog-card__arrow-hover {
+      height: 67px;
+      width: 67px;
+    }
+  }
