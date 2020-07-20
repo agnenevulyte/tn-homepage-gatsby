@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { RichText } from 'prismic-reactjs';
-import Link from 'gatsby'
+// import Link from 'gatsby'
 import DynamicIcon  from '../dynamic-icon';
 import "./introduction.css";
 import "../../colors.css"

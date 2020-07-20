@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
+// import {Link} from 'gatsby';
+import Link from '../link'
 import { RichText } from 'prismic-reactjs';
 import FacebookSVG from '../../icons/facebook.svg';
 import InstagramSVG from '../../icons/instagram.svg';
@@ -23,9 +24,9 @@ const linkResolver = function(doc) {
   };
   
   // Insert <span> tags into legal text from prismic api span references
-  const mapSpans = (text, spans) => spans.reduce((p, { start, end }) => (
-    `${ p.slice(0, start) }<span>${ p.slice(start, end) }</span>${ p.slice(end) }`
-  ), text);
+//   const mapSpans = (text, spans) => spans.reduce((p, { start, end }) => (
+//     `${ p.slice(0, start) }<span>${ p.slice(start, end) }</span>${ p.slice(end) }`
+//   ), text);
   
   const titleize = title => (title ? `${ title.charAt(0).toUpperCase() }${ title.slice(1).toLowerCase() }` : '');
   
@@ -76,13 +77,13 @@ const linkResolver = function(doc) {
           <div className="footer__right footer__right--cols">
             <nav className="footer__navigation">
               { data.navigation_items.map(link => (
-                <Link href={ link.url || '/' } key={ link.display_value } className="footer__navigation-link">{ link.display_value }</Link>
+                <Link href={ `https://tradenation.com${link.url}` || '/' } key={ link.display_value } className="footer__navigation-link">{ link.display_value }</Link>
               )) }
             </nav>
             <div className="footer__faq">
               <Link href="/faq" className="footer__faq-title">FAQ</Link>
               { data.faqs.map(faq => (
-                <Link href={ faq.url || '/' } key={ faq.display_value } className="footer__faq-link">{ faq.display_value }</Link>
+                <Link href={ `https://tradenation.com${faq.url}` || '/' } key={ faq.display_value } className="footer__faq-link">{ faq.display_value }</Link>
               )) }
             </div>
           </div>

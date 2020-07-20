@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import DynamicIcon from '../dynamic-icon';
 import moment from 'moment';
 import './blog-card.css';
@@ -25,7 +24,7 @@ function BlogCard({ articleData, specificImage }) {
   );
 
   return (
-    <Link className="blog-card" to={ `https://tradenation.com/blog/${ articleData.uid }` }>
+    <a className="blog-card" to={ `https://tradenation.com/blog/${ articleData.uid }` }>
       { articleImageUrl && (
         <div className="blog-card__media-container">
           <div className="blog-card__img" style={ { backgroundImage: `url(${ articleImageUrl }` } }>
@@ -52,7 +51,7 @@ function BlogCard({ articleData, specificImage }) {
       <div className="blog-card__arrow-hover" aria-hidden="true">
         <DynamicIcon icon="arrow-left" wrapWithSpan={ false } />
       </div>
-    </Link>
+    </a>
   );
 };
 

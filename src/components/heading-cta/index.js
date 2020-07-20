@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
+// import {Link} from 'gatsby';
+import Link from '../link'
 import { RichText } from 'prismic-reactjs';
 import { generate as generateShortId } from 'shortid';
 import './heading-cta.css';

@@ -3,10 +3,7 @@ import React from 'react';
 import DynamicIcon  from '../dynamic-icon'
 ;
 import styled from "styled-components";
-import "./hero-homepage.css"
-import "../../colors.css"
-import "../../z-index.css"
-import "../../fonts.css"
+import "./hero-homepage.css";
 
 
 

@@ -5,6 +5,7 @@ import Introduction from './introduction';
 import HeadingCta from './heading-cta';
 import ListBlock from './list-block';
 import RelatedArticles from './related-articles';
+import Footer from './footer';
 
 const PrismicTypes = {
     hero: HeroHomepage,
@@ -29,5 +30,6 @@ const PrismicTypes = {
 export {
     DynamicIcon,
     Header,
+    Footer,
     PrismicTypes,
 }

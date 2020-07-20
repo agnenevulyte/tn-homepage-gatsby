@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
-import { Link } from 'gatsby';
+// import {Link} from 'gatsby';
+import Link from '../link'
 import styled from 'styled-components';
 import DynamicIcon from '../dynamic-icon';
 import './list-block.css';
 
-const ListBlock = ({ data }) => {
+function ListBlock({ data }) {
 
 
   const hasMedia = data.image && data.image.url && data.image.mobile && data.image.mobile.url;
