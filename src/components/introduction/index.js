@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { RichText } from 'prismic-reactjs';
 import Link from 'gatsby'
-import { DynamicIcon } from '../index';
+import DynamicIcon  from '../dynamic-icon';
 import "./introduction.css";
 import "../../colors.css"
 import "../../z-index.css"
@@ -23,31 +23,34 @@ function Introduction({ data }) {
     }, [])
 
     const generateCtaItem = (ctaText, ctaUrl, ctaIcon) => {
+        console.log('ctaIcon---')
         // const CtaIcon = DynamicIcon(
-        //   {
-        //     icon: textBackgroundColor === 'tn_orange' ? `${ ctaIcon }-white` : ctaIcon,
-        //     className: 'introduction__icon',
-        //     wrapWithSpan: false
-        //   }
-        // );
-
-        // return (
-        //     <a
-        //       href="`https://tradenation.com${ctaUrl}`"
-        //       className="introduction__link"
-        //     >
-        //     {CtaIcon}
-        //       <span className="introduction__link-text">
-        //         { ctaText }
-        //       </span>
-        //     </a>
+        //     {
+        //       icon: textBackgroundColor === 'tn_orange' ? `${ ctaIcon }-white` : ctaIcon,
+        //       className: 'introduction__icon',
+        //       wrapWithSpan: false
+        //     }
         //   );
 
+        const CtaIcon = DynamicIcon(
+            {
+              icon: textBackgroundColor === 'tn_orange' ? `${ ctaIcon }-white` : ctaIcon,
+              className: 'introduction__icon',
+              wrapWithSpan: false
+            }
+          );
+
         return (
-            <span className="introduction__link-text">
-                {ctaText}
-            </span>
-        )
+            <a
+              href={`https://tradenation.com${ctaUrl}`}
+              className="introduction__link"
+            >
+            {CtaIcon}
+              <span className="introduction__link-text">
+                { ctaText }
+              </span>
+            </a>
+          );
     };
 
     const textColumnAlignment = (
