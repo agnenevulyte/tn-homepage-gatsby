@@ -5,7 +5,7 @@ import React from "react";
 import RightArrowSVG from '../../icons/right-arrow.svg';
 import LinkArrowSVG from '../../icons/link-arrow.svg';
 // import LinkArrowGreySVG from "img/icons/link-arrow-grey.svg";
-// import FlagSVG from "img/icons/flag.svg";
+import FlagSVG from "../../icons/flag.svg";
 // import FlexibilitySVG from "img/icons/cog.svg";
 // import MarketAccessSVG from "img/icons/padlock.svg";
 // import TermsConditionsSvg from "img/icons/terms-conditions.svg";
@@ -68,7 +68,7 @@ const icons = {
   "circle-arrow-right-white": LinkArrowSVG,
   // "circle-arrow-grey": LinkArrowGreySVG,
   // circles: WinSVG,
-  // flag: FlagSVG,
+  "flag": FlagSVG,
   // cog: FlexibilitySVG,
   // "lock-open": MarketAccessSVG,
   // "terms-conditions": TermsConditionsSvg,

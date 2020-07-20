@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import LinkButton from '../button';
 import BurgerNavSvg from '../images/svgs/burger-nav';
 import CloseSvg from '../images/svgs/close';
-// import '../../breakpoints.css'
-import '../../fonts.css';
 import './header.css';
-import '../../colors.css';
 
 function Header({ ...props }) {
 

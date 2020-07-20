@@ -3,6 +3,7 @@ import Header from './header';
 import HeroHomepage from './hero-homepage';
 import Introduction from './introduction';
 import HeadingCta from './heading-cta';
+import ListBlock from './list-block';
 
 const PrismicTypes = {
     hero: HeroHomepage,
@@ -12,7 +13,7 @@ const PrismicTypes = {
     // landingpageintroduction: LandingPageIntroduction,
     headingcta: HeadingCta,
     // list: ListWithDescription,
-    // listblock: ListBlock,
+    listblock: ListBlock,
     // reviewcarousel: ReviewCarousel,
     // wysiwygcomponent: Wysiwyg,
     // featurelist: FeatureList,

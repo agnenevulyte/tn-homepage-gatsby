@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import { PrismicTypes } from '../components';
-import Layout from '../components/layout';
+// import Layout from '../components/layout';
 import Header from '../components/header'
 import '../components/utils/app.css';
 import '../common.css';
+import '../colors.css';
+import '../fonts.css';
+import '../z-index.css';
 // import HeroHomepage from '../components/hero-homepage'
 
 export default function HomePage() {

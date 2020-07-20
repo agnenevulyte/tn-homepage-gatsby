@@ -1,0 +1,286 @@
+.list-block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+    position: relative;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+  @media (min-width: 980px) {
+    .list-block {
+      flex-direction: row;
+      margin-top: 104px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .list-block {
+      margin-top: 180px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  @media (min-width: 1920px) {
+    margin-top: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  .list-block__container-title {
+    font: normal 500 1.4rem/normal var(--font-montserrat);
+    letter-spacing: 0.15em;
+    padding-bottom: 6px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  @media (min-width: 980px) {
+    .list-block__container-title {
+      font-size: 1.3rem;
+      padding-bottom: 20px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .list-block__container-title {
+      font-size: 1.6rem;
+    }
+  }
+  @media (min-width: 1920px) {
+    .list-block__container-title {
+      font-size: 2.4rem;
+      padding-bottom: 37px;
+    }
+  }
+  .list-block__child-container {
+    order: 2;
+    padding: 40px 24px 80px 24px;
+    width: 100%;
+  }
+  @media (min-width: 980px) {
+    .list-block__child-container {
+      margin-top: 56px;
+      order: 1;
+      padding: 65px 103px 80px 103px;
+      position: relative;
+      width: calc(100% - 399px);
+    }
+    .list-block__child-container::after {
+      content: "";
+      height: 100%;
+      position: absolute;
+      right: -300px;
+      top: 0;
+      width: 300px;
+      z-index: 3;
+    }
+  }
+  @media (min-width: 1280px) {
+    .list-block__child-container {
+      margin-top: 72px;
+      padding: 87px 136px 103px 136px;
+      width: calc(100% - 518px);
+    }
+    .list-block__child-container::before {
+      content: "";
+      height: 100%;
+      left: calc((1280px - 100vw) / 2);
+      position: absolute;
+      top: 0;
+      width: calc((100vw - 1280px) / 2);
+    }
+  }
+  @media (min-width: 1920px) {
+    .list-block__child-container {
+      margin-top: 110px;
+      padding: 130px 207px 150px 207px;
+      width: calc(100% - 776px);
+    }
+    .list-block__child-container::before {
+      left: calc((1920px - 100vw) / 2);
+      width: calc((100vw - 1920px) / 2);
+    }
+  }
+  .list-block__child-container--grey {
+    background: var(--color-light);
+    color: var(--color-black-gray);
+  }
+  .list-block__child-container--grey::before, .list-block__child-container--grey::after {
+    background: var(--color-light);
+  }
+  .list-block__child-container--white {
+    background: var(--color-white);
+    color: var(--color-black-gray);
+  }
+  .list-block__child-container--white::before, .list-block__child-container--white::after {
+    background: var(--color-white);
+  }
+  .list-block__child-container--black_grey {
+    background: var(--color-dark);
+    color: var(--color-white);
+  }
+  .list-block__child-container--black_grey::before, .list-block__child-container--black_grey::after {
+    background: var(--color-dark);
+  }
+  .list-block__img {
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+    height: 100%;
+    width: 100%;
+  }
+  .list-block__img-shadow-bg::before {
+    background: var(--color-bright-orange);
+    content: "";
+    height: 100%;
+    left: -48px;
+    position: absolute;
+    top: 53px;
+    width: 88.5%;
+    z-index: -1;
+  }
+  .list-block__img-container {
+    height: 261px;
+    order: 1;
+    position: relative;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .list-block__img-container {
+      height: 365px;
+    }
+  }
+  @media (min-width: 980px) {
+    .list-block__img-container {
+      height: 510px;
+      margin-right: 24px;
+      order: 2;
+      width: 375px;
+      z-index: 4;
+    }
+  }
+  @media (min-width: 1280px) {
+    .list-block__img-container {
+      height: 665px;
+      margin-right: 28px;
+      width: 490px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .list-block__img-container {
+      height: 995px;
+      margin-right: 43px;
+      width: 733px;
+    }
+  }
+  .list-block__subtitle {
+    font: normal 500 2.2rem/normal var(--font-montserrat);
+    grid-area: list-block-title;
+    padding: 24px 0 18px;
+  }
+  @media (min-width: 980px) and (max-width: 1279px) {
+    .list-block__subtitle {
+      font-size: 1.6rem;
+      padding: 0 0 12px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .list-block__subtitle {
+      padding-top: 0;
+    }
+  }
+  @media (min-width: 1920px) {
+    .list-block__subtitle {
+      font-size: 3.2rem;
+    }
+  }
+  .list-block__text {
+    font: normal 300 1.8rem/2.6rem var(--font-montserrat);
+    grid-area: list-block-text;
+  }
+  @media (min-width: 980px) and (max-width: 1279px) {
+    .list-block__text {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+  }
+  @media (min-width: 1920px) {
+    .list-block__text {
+      font-size: 2.7rem;
+      line-height: 3.9rem;
+    }
+  }
+  .list-block__container {
+    display: grid;
+    grid-template-areas: "list-block-icon" "list-block-title" "list-block-text";
+    /* 'list-block-cta-icon list-block-cta-text'; */
+    grid-template-columns: minmax(0, 3fr);
+    /* border: 1px solid red; */
+    padding: 40px 0 0;
+    width: 100%;
+  }
+  @media (min-width: 980px) {
+    .list-block__container {
+      grid-template-areas: "list-block-icon list-block-title" "list-block-icon list-block-text";
+      /* 'list-block-cta-icon list-block-cta-text'; */
+      /* use minmax in this case to fix text wrapping for IE/Firefox */
+      grid-template-columns: 65px minmax(0, 1fr);
+      padding-left: 21px;
+      padding-top: 58px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .list-block__container {
+      grid-template-columns: 78px minmax(0, 1fr);
+      padding-left: 28px;
+      padding-top: 80px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .list-block__container {
+      grid-template-columns: 125px minmax(0, 1fr);
+      padding-left: 39px;
+      padding-top: 116px;
+    }
+  }
+  .list-block__container-aside {
+    grid-area: list-block-icon;
+  }
+  .list-block__icon {
+    height: 36px;
+    width: 36px;
+  }
+  @media (min-width: 980px) and (max-width: 1279px) {
+    .list-block__icon {
+      height: 26px;
+      width: 26px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .list-block__icon {
+      height: 54px;
+      width: 54px;
+    }
+  }
+  
+  /* added in classes to manage CTA items in List Block - APT */
+  .list__block__flex-stack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+  }
+  
+  .list__block__cta__alignment {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  
+  .list__block__cta__link {
+    align-content: center;
+    display: flex;
+  }
