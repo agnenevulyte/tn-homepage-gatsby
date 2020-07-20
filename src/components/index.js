@@ -2,6 +2,7 @@ import DynamicIcon from './dynamic-icon';
 import Header from './header';
 import HeroHomepage from './hero-homepage';
 import Introduction from './introduction';
+import HeadingCta from './heading-cta';
 
 const PrismicTypes = {
     hero: HeroHomepage,
@@ -9,7 +10,7 @@ const PrismicTypes = {
     // quotes: () => '',
     introduction: Introduction,
     // landingpageintroduction: LandingPageIntroduction,
-    // headingcta: HeadingCta,
+    headingcta: HeadingCta,
     // list: ListWithDescription,
     // listblock: ListBlock,
     // reviewcarousel: ReviewCarousel,

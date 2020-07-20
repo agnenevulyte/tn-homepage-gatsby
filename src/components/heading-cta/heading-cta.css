@@ -1,0 +1,85 @@
+.heading-cta {
+    margin: 120px 30px;
+    text-align: center;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+  @media (min-width: 768px) {
+    .heading-cta {
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+  }
+  .heading-cta__title {
+    margin-bottom: 36px;
+  }
+  .heading-cta__title h1,
+  .heading-cta__title h2,
+  .heading-cta__title h3,
+  .heading-cta__title h4,
+  .heading-cta__title h5,
+  .heading-cta__title h6 {
+    font: normal normal 3.6rem/normal var(--font-montserrat);
+  }
+  @media (min-width: 768px) {
+    .heading-cta__title h1,
+  .heading-cta__title h2,
+  .heading-cta__title h3,
+  .heading-cta__title h4,
+  .heading-cta__title h5,
+  .heading-cta__title h6 {
+      font-size: 4rem;
+    }
+  }
+  .heading-cta__buttons {
+    display: block;
+  }
+  @media (min-width: 480px) {
+    .heading-cta__buttons {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .heading-cta__button {
+    display: block;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  @media (min-width: 480px) {
+    .heading-cta__button {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  .heading-cta__cta-item {
+    border-radius: 50px;
+    display: inline-block;
+    font: 500 1.6rem/2.3rem var(--font-montserrat);
+    max-width: 75%;
+    padding: 12px 30px;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  @media (min-width: 480px) {
+    .heading-cta__cta-item {
+      max-width: none;
+    }
+  }
+  .heading-cta__cta-item-white {
+    background: var(--color-white);
+    border: 1px solid var(--color-dark-orange);
+    color: var(--color-dark-orange);
+  }
+  .heading-cta__cta-item-white:hover {
+    background: var(--color-dark-orange);
+    color: var(--color-white);
+  }
+  .heading-cta__cta-item-tn_orange {
+    background: var(--color-dark-orange);
+    border: 1px solid transparent;
+    color: var(--color-white);
+  }
+  .heading-cta__cta-item-tn_orange:hover {
+    background: var(--color-white);
+    border: 1px solid var(--color-dark-orange);
+    color: var(--color-dark-orange);
+  }
