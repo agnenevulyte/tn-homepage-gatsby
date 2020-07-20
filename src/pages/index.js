@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { PrismicTypes } from '../components';
 // import Layout from '../components/layout';
 import Header from '../components/header'
+import Footer from '../components/footer';
 import '../components/utils/app.css';
 import '../common.css';
 import '../colors.css';
@@ -53,9 +54,11 @@ export default function HomePage() {
           })}
         </div>
       )}
-
-
     </main>
+    {myData && myData.footer && contentLoaded && (
+      <Footer footer={myData.footer}/>
+    )}
+    
     </React.Fragment>
 
   )
