@@ -1,6 +1,6 @@
 import { RichText } from "prismic-reactjs";
 import React from 'react';
-import { DynamicIcon } from '../index'
+import DynamicIcon  from '../dynamic-icon'
 ;
 import styled from "styled-components";
 import "./hero-homepage.css"
@@ -49,7 +49,7 @@ function HeroHomepage({ data }) {
                       <a className="hero-homepage__link hero-homepage__link--white" href="`https://tradenation${item.primary_cta_url}`">
                           {item.primary_cta_display_value}
                           <span className="hero-homepage__link-arrow hero-homepage__link-arrow--white">
-                           
+                            <DynamicIcon icon="circle-arrow-right-white" />
                           </span>
                       </a>
          

@@ -8,6 +8,14 @@ const path = require(`path`);
 module.exports = {
   plugins: [
     {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /icons/
+        }
+      }
+    },
+    {
       resolve: 'gatsby-source-multi-api',
       options: {
         apis: [
