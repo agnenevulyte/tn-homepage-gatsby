@@ -20,10 +20,9 @@ export default function HomePage() {
       .then(resultData => {
         setmyData(resultData.data)
         console.log('resultData.data---', resultData.data)
-        console.log('fuck meeee---', resultData.data.components[0].component)
+        console.log('resultData.data.components[0].component', resultData.data.components[0].component)
       })
   }, [])
-  // console.log('myData---', myData)
   useEffect(() => {
     myData && myData.components && myData.components.length > 0 && setContentLoaded(true);
   }, [myData]);

@@ -17,21 +17,12 @@ function Introduction({ data }) {
 
     useEffect(() => {
         if (window.innerWidth < 768 && window.innerHeight < 1023) {
-            console.log(window.innerWidth)
+            // console.log(window.innerWidth)
             setMobile(true);
         }
     }, [])
 
     const generateCtaItem = (ctaText, ctaUrl, ctaIcon) => {
-        console.log('ctaIcon---')
-        // const CtaIcon = DynamicIcon(
-        //     {
-        //       icon: textBackgroundColor === 'tn_orange' ? `${ ctaIcon }-white` : ctaIcon,
-        //       className: 'introduction__icon',
-        //       wrapWithSpan: false
-        //     }
-        //   );
-
         const CtaIcon = DynamicIcon(
             {
               icon: textBackgroundColor === 'tn_orange' ? `${ ctaIcon }-white` : ctaIcon,
