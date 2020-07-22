@@ -14,8 +14,7 @@ function Header({ ...props }) {
 
     return (
         <React.Fragment>
-            <header className="header header--orange w-100">
-
+            <header className={mobileNavOpen ? 'header header--open-mobile-nav' : 'header header--orange'} >
                 <div className="header__container container container--large d-flex flex-row no-gutters w-100">
 
                     <button
@@ -31,37 +30,33 @@ function Header({ ...props }) {
                     <div className="header__branding d-flex flex-row">
                         <a className="nav__link a--small" href='/'>
                             <img className="header__logo--desktop" src="./header_logo.svg" alt="header logo tn" />
-                            <img className="header__logo--mobile" src="./header_logo_small.svg" alt="header logo mobile tn" />
+                            <img className="header__logo--mobile" src={mobileNavOpen ? 'https://images.prismic.io/trade-nation-marketing-cms%2F8ad90079-abf0-492b-a99e-33982b0ec6d8_icon.svg?auto=compress,format' : "./header_logo_small.svg"} alt="header logo mobile tn" />
                         </a>
                     </div>
 
 
                     <nav className="header__nav nav">
-
-
                         <a className="nav__link a--small" href='/'>
                             What we do
-                            </a>
-
-
+                        </a>
                         <a className="nav__link a--small" href='/'>
                             Why choose us
-                            </a>
-
+                        </a>
                         <a className="nav__link a--small" href='/'>
                             Who we are
-                            </a>
-
+                        </a>
                         <a className="nav__link a--small" href='/'>
                             FAQ
-                            </a>
-
+                        </a>
                         <a className="nav__link a--small" href='/'>
                             Discover More
-                            </a>
-
-
-
+                        </a>
+                        {mobileNavOpen && (
+                            <div className="nav__footer-links">
+                                <a href="/" className="nav__footer-link">Get in touch</a>
+                                <a href={"https://tradenation.com/login"} className="nav__footer-link">Login</a>
+                            </div>
+                        )}
                     </nav>
 
 
@@ -70,9 +65,7 @@ function Header({ ...props }) {
                         <LinkButton text="Join us" destination="/" secondary />
                     </div>
 
-
                 </div>
-
             </header>
         </React.Fragment>
     );
